@@ -23,7 +23,9 @@ def hash_password(password: str) -> str:
     Returns:
         해시된 비밀번호
     """
-    return pwd_context.hash(password)
+    # bcrypt는 72바이트 제한이 있음
+    password_bytes = password.encode('utf-8')[:72].decode('utf-8', errors='ignore')
+    return pwd_context.hash(password_bytes)
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
@@ -37,7 +39,9 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
     Returns:
         일치 여부
     """
-    return pwd_context.verify(plain_password, hashed_password)
+    # bcrypt는 72바이트 제한이 있음
+    password_bytes = plain_password.encode('utf-8')[:72].decode('utf-8', errors='ignore')
+    return pwd_context.verify(password_bytes, hashed_password)
 
 
 def check_password_strength(password: str) -> tuple[bool, list[str]]:
