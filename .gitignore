@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+.venv/
+
+# 환경 설정
+.env
+.env.local
+*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 테스트/커버리지
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# 빌드
+build/
+dist/
+*.egg-info/
+
+# 로그
+logs/
+*.log
+
+# 오디오 파일
+*.wav
+*.mp3
+*.ogg
+recordings/
+
+# 모델 파일 (용량 큼)
+*.pt
+*.pth
+*.onnx
+models/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Whisper 캐시
+~/.cache/whisper/

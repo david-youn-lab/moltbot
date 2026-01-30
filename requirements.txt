@@ -1,0 +1,49 @@
+# 음성인식 제어 시스템 - 의존성 목록
+
+# === 웹 프레임워크 ===
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6
+
+# === 음성인식 ===
+openai-whisper>=20231117
+# vosk>=0.3.45  # 경량 대안 (선택적)
+
+# === MQTT 메시지 브로커 ===
+paho-mqtt>=2.0.0
+aiomqtt>=2.0.0
+
+# === 데이터 처리 ===
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+numpy>=1.26.0
+
+# === 오디오 처리 ===
+sounddevice>=0.4.6
+soundfile>=0.12.1
+webrtcvad>=2.0.10
+
+# === 비동기 처리 ===
+asyncio-mqtt>=0.16.0
+aiofiles>=23.2.0
+httpx>=0.26.0
+
+# === 유틸리티 ===
+python-dotenv>=1.0.0
+loguru>=0.7.2
+pyyaml>=6.0.1
+rich>=13.7.0
+
+# === IoT 프로토콜 ===
+# bleak>=0.21.0  # Bluetooth LE
+# zeroconf>=0.131.0  # mDNS/DNS-SD
+
+# === 테스트 ===
+pytest>=7.4.0
+pytest-asyncio>=0.23.0
+pytest-cov>=4.1.0
+
+# === 개발 도구 ===
+black>=24.1.0
+ruff>=0.1.0
+mypy>=1.8.0
