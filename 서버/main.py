@@ -24,17 +24,17 @@ settings = get_server_settings()
 async def lifespan(app: FastAPI):
     """애플리케이션 라이프사이클"""
     # 시작 시
-    print(f"🚀 {settings.app_name} v{settings.app_version} 시작")
-    print(f"📍 환경: {settings.environment}")
+    print(f"[START] {settings.app_name} v{settings.app_version}")
+    print(f"[ENV] {settings.environment}")
     
     # 데이터베이스 초기화
     init_db()
-    print("✅ 데이터베이스 초기화 완료")
+    print("[OK] Database initialized")
     
     yield
     
     # 종료 시
-    print("👋 서버 종료")
+    print("[STOP] Server shutdown")
 
 
 # FastAPI 앱 생성
