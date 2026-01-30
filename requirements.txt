@@ -34,6 +34,19 @@ loguru>=0.7.2
 pyyaml>=6.0.1
 rich>=13.7.0
 
+# === 데이터베이스 ===
+sqlalchemy>=2.0.0
+# asyncpg>=0.29.0  # PostgreSQL (선택적)
+# psycopg2-binary>=2.9.0  # PostgreSQL (선택적)
+
+# === 인증/보안 ===
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+cryptography>=42.0.0
+
+# === HTTP 클라이언트 ===
+httpx>=0.26.0
+
 # === IoT 프로토콜 ===
 # bleak>=0.21.0  # Bluetooth LE
 # zeroconf>=0.131.0  # mDNS/DNS-SD
@@ -47,3 +60,7 @@ pytest-cov>=4.1.0
 black>=24.1.0
 ruff>=0.1.0
 mypy>=1.8.0
+
+# === 배포 (선택적) ===
+# gunicorn>=21.0.0
+# pyinstaller>=6.0.0
